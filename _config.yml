@@ -1,11 +1,12 @@
 title: "Apple: Road to Mobile"
 description: "Writing a book about Apple is almost as foolish as reading one."
 url: https://tangero.github.io/apple-mobile
-aux_links:
-  "Template Repository": https://github.com/just-the-docs/just-the-docs-template
 
 sass:
-  sass_dir: _sass  
+  sass_dir: _sass
 
 remote_theme: just-the-docs/just-the-docs
 color_scheme: nil
+
+aux_links:
+  "Template Repository": https://github.com/just-the-docs/just-the-docs-template
