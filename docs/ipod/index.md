@@ -4,6 +4,11 @@ title: iPod
 nav_order: 2
 has_children: true
 has_toc: false
+year: 1997
+products: 
+    - iPod
+    - Newton
+    - iMac
 ---
 
 ## The revolutionary iPod is coming
