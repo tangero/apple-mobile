@@ -1,8 +1,8 @@
-title: Just the Docs Template
+title: Apple: Road to Mobile
 description: A starter template for a Jeykll site using the Just the Docs theme!
-theme: just-the-docs
+theme: Writing a book about Apple is almost as foolish as reading one.
 
-url: https://just-the-docs.github.io
+url: https://tangero.github.io/apple-mobile
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
