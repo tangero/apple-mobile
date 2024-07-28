@@ -1,0 +1,16 @@
+{% if page.year or page.products %}
+  <div class="nav-info-box">
+    <h4>Informace o článku</h4>
+    {% if page.year %}
+      <p><strong>Rok:</strong> {{ page.year }}</p>
+    {% endif %}
+    {% if page.products %}
+      <p><strong>Produkty:</strong></p>
+      <ul>
+      {% for product in page.products %}
+        <li>{{ product }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endif %}
