@@ -17,9 +17,11 @@
     </button>
   </div>
 
+  {% include custom_nav_footer.html %}
+
   {% include_cached components/site_nav.html %}
 
-  {% include custom_nav_footer.html %}
+
 
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
