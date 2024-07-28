@@ -4,6 +4,7 @@ title: iPod
 nav_order: 2
 has_children: true
 has_toc: false
+nav_exclude: true
 year: 1997
 products: 
     - iPod
