@@ -7,6 +7,3 @@ aux_links:
 
 sass:
   sass_dir: _sass  
-  
-remote_theme: just-the-docs/just-the-docs
-color_scheme: nil
