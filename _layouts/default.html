@@ -21,39 +21,32 @@ layout: table_wrappers
     <div class="main-content-wrap">
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content">
-        <div class="content-and-sidebar-wrapper">
-          <main>
-            {% if site.heading_anchors != false %}
-              {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
-            {% else %}
-              {{ content }}
-            {% endif %}
-
-            {% if page.has_children == true and page.has_toc != false %}
-              {% include components/children_nav.html %}
-            {% endif %}
-          </main>
-          
+        <div class="content">
           {% if page.year or page.products %}
-          <div class="page-sidebar">
-            {% if page.year %}
-            <div class="year-info">
-              <h3>Year</h3>
-              <p>{{ page.year }}</p>
+            <div class="info-box">
+              <h4>Informace o článku</h4>
+              {% if page.year %}
+                <p><strong>Rok:</strong> {{ page.year }}</p>
+              {% endif %}
+              {% if page.products %}
+                <p><strong>Produkty:</strong></p>
+                <ul>
+                  {% for product in page.products %}
+                    <li>{{ product }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             </div>
-            {% endif %}
+          {% endif %}
 
-            {% if page.products %}
-            <div class="products-info">
-              <h3>Products</h3>
-              <ul>
-              {% for product in page.products %}
-                <li>{{ product }}</li>
-              {% endfor %}
-              </ul>
-            </div>
-            {% endif %}
-          </div>
+          {% if site.heading_anchors != false %}
+            {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+          {% else %}
+            {{ content }}
+          {% endif %}
+
+          {% if page.has_children == true and page.has_toc != false %}
+            {% include components/children_nav.html %}
           {% endif %}
         </div>
         
