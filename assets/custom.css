@@ -56,3 +56,15 @@
       position: static;
     }
   }
+
+  .main-content {
+    max-width: 800px !important;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 66.5rem) {
+    .main-content-wrap {
+      margin-left: calc((100% - 1064px) / 2 + 264px) !important;
+      margin-right: calc((100% - 1064px) / 2) !important;
+    }
+  }
