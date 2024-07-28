@@ -10,6 +10,7 @@ products:
     - Newton
     - iMac
 ---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/custom.css">
 
 ## The revolutionary iPod is coming
 
