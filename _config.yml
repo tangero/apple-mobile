@@ -10,11 +10,3 @@ color_scheme: nil
 
 aux_links:
   "Template Repository": https://github.com/just-the-docs/just-the-docs-template
-
-plugins:
-  - jekyll-remote-theme
-  - jekyll-include-cache
-
-gems:
-  - jekyll-remote-theme
-  - jekyll-include-cache  
