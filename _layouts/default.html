@@ -25,17 +25,21 @@ layout: table_wrappers
             {% if page.year or page.products %}
               <div class="info-box">
                 <h4>Informace o článku</h4>
-                {% if page.year %}
-                  <p><strong>Rok:</strong> {{ page.year }}</p>
-                {% endif %}
-                {% if page.products %}
-                  <p><strong>Produkty:</strong></p>
-                  <ul>
-                  {% for product in page.products %}
-                    <li>{{ product }}</li>
-                  {% endfor %}
-                  </ul>
-                {% endif %}
+                <div class="info-box-content">
+                  {% if page.year %}
+                    <div class="info-item">
+                      <strong>Rok:</strong> {{ page.year }}
+                    </div>
+                  {% endif %}
+                  {% if page.products %}
+                    <div class="info-item">
+                      <strong>Produkty:</strong>
+                      {% for product in page.products %}
+                        {% if forloop.last %}{{ product }}{% else %}{{ product }}, {% endif %}
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
               </div>
             {% endif %}
           
@@ -55,6 +59,7 @@ layout: table_wrappers
           </div>
 
 
+          
     {% if site.search_enabled != false %}
       {% include components/search_footer.html %}
     {% endif %}

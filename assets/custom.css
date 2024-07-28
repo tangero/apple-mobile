@@ -1,47 +1,40 @@
 .main-content {
-    position: relative;
-    max-width: 800px;
+    max-width: 900px; /* Nebo jakákoli jiná požadovaná šířka */
     margin: 0 auto;
-    padding-right: 280px; /* Poskytuje prostor pro info-box */
-  }
-  
-  .content {
-    width: 100%;
   }
   
   .info-box {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 250px;
-    margin-left: 30px;
-    padding: 15px;
     background-color: #f8f9fa;
     border: 1px solid #e9ecef;
     border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
     font-size: 0.9em;
   }
   
   .info-box h4 {
     margin-top: 0;
+    margin-bottom: 10px;
     border-bottom: 1px solid #e9ecef;
     padding-bottom: 5px;
   }
   
-  .info-box ul {
-    padding-left: 20px;
-    margin-bottom: 0;
+  .info-box-content {
+    display: flex;
+    flex-wrap: wrap;
   }
   
-  @media (max-width: 1000px) {
-    .main-content {
-      padding-right: 0;
-    }
+  .info-item {
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
   
-    .info-box {
-      position: static;
-      width: 100%;
-      margin-left: 0;
-      margin-bottom: 20px;
+  @media (max-width: 600px) {
+    .info-box-content {
+      flex-direction: column;
+    }
+    
+    .info-item {
+      margin-right: 0;
     }
   }
