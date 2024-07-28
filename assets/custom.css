@@ -1,32 +1,25 @@
-.main-content-wrap {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content-wrapper {
-    display: flex;
-    flex-direction: row-reverse; /* Změní pořadí elementů */
-    justify-content: space-between;
-    align-items: flex-start;
+.main-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-right: 280px; /* Poskytuje prostor pro info-box */
   }
   
   .content {
-    flex: 1;
-    min-width: 0; /* Důležité pro správné chování flexboxu */
-    max-width: calc(100% - 280px); /* Poskytuje prostor pro infobox */
+    width: 100%;
   }
   
   .info-box {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 250px;
-    position: sticky;
-    top: 20px; /* Vzdálenost od horního okraje při scrollování */
-    margin-right: 30px;
+    margin-left: 30px;
     padding: 15px;
     background-color: #f8f9fa;
     border: 1px solid #e9ecef;
     border-radius: 4px;
     font-size: 0.9em;
-    align-self: flex-start; /* Zajistí, že box zůstane nahoře */
   }
   
   .info-box h4 {
@@ -40,31 +33,15 @@
     margin-bottom: 0;
   }
   
-  @media (max-width: 800px) {
-    .content-wrapper {
-      flex-direction: column-reverse; /* Změní pořadí na mobilních zařízeních */
+  @media (max-width: 1000px) {
+    .main-content {
+      padding-right: 0;
     }
-    
-    .content {
-      max-width: 100%;
-    }
-    
-    .info-box {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px;
-      position: static;
-    }
-  }
-
-  .main-content {
-    max-width: 800px !important;
-    margin: 0 auto;
-  }
   
-  @media (min-width: 66.5rem) {
-    .main-content-wrap {
-      margin-left: calc((100% - 1064px) / 2 + 264px) !important;
-      margin-right: calc((100% - 1064px) / 2) !important;
+    .info-box {
+      position: static;
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
     }
   }
