@@ -6,6 +6,15 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SH2KYRX95L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SH2KYRX95L');
+</script>
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
@@ -60,11 +69,7 @@ layout: table_wrappers
               {% endif %}
             </div>
 
-            <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
-            <hyvor-talk-comments
-              website-id="11792"
-              page-id=""
-            ></hyvor-talk-comments>
+
           
             {% include components/footer.html %}
           </div>
