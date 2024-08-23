@@ -3,7 +3,7 @@ layout: default
 title: iPod
 nav_order: 2
 has_children: true
-has_toc: false
+has_toc: true
 year: 1997
 products: 
     - iPod
