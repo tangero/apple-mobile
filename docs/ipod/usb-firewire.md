@@ -2,7 +2,7 @@
 layout: default
 title: "First important component: USB (and also FireWire)"
 nav_order: 3
-has_children: true
+has_children: false
 has_toc: false
 year: 1997
 people: 
@@ -11,6 +11,8 @@ products:
     - iPod
     - USB
     - FireWire
+    - iLife
+    - iMovie
 ---
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/custom.css">
 

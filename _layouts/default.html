@@ -24,16 +24,21 @@ layout: table_wrappers
         <div id="main-content" class="main-content">
             {% if page.year or page.products %}
               <div class="info-box">
-                <h4>Informace o článku</h4>
+                <h4>The context of this story</h4>
                 <div class="info-box-content">
                   {% if page.year %}
                     <div class="info-item">
-                      <strong>Rok:</strong> {{ page.year }}
+                      <strong>Year:</strong> {{ page.year }}
                     </div>
                   {% endif %}
+                  {% if page.people %}
+                  <div class="info-item">
+                    <strong>People:</strong> {{ page.people }}
+                  </div>
+                {% endif %}
                   {% if page.products %}
                     <div class="info-item">
-                      <strong>Produkty:</strong>
+                      <strong>Products:</strong>
                       {% for product in page.products %}
                         {% if forloop.last %}{{ product }}{% else %}{{ product }}, {% endif %}
                       {% endfor %}
