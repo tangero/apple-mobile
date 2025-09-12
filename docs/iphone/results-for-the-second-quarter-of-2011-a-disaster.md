@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Results for the second quarter of 2011: a disaster
+title: "Results for the second quarter of 2011: a disaster"
 parent: iPhone Revolution
 nav_order: 42
 has_children: False

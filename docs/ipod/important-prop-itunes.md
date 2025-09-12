@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Important prop: iTunes
+title: "Important prop: iTunes"
 parent: iPod Era
 nav_order: 5
 has_children: False

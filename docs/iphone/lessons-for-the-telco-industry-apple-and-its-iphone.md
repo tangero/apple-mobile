@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lessons for the telco industry: Apple and its iPhone
+title: "Lessons for the telco industry: Apple and its iPhone"
 parent: iPhone Revolution
 nav_order: 23
 has_children: False

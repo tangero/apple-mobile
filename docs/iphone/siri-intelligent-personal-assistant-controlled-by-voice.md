@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Siri: intelligent personal assistant controlled by voice
+title: "Siri: intelligent personal assistant controlled by voice"
 parent: iPhone Revolution
 nav_order: 76
 has_children: False

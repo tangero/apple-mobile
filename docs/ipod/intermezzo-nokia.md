@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Intermezzo: Nokia
+title: "Intermezzo: Nokia"
 parent: iPod Era
 nav_order: 29
 has_children: False

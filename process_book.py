@@ -206,7 +206,7 @@ This section covers the {category_title.lower()} period in Apple's history.
         if people:
             front_matter['people'] = people
         
-        # Create YAML front matter manually
+        # Create YAML front matter manually with proper escaping
         yaml_content = "---\n"
         for key, value in front_matter.items():
             if isinstance(value, list):
@@ -215,7 +215,12 @@ This section covers the {category_title.lower()} period in Apple's history.
                     for item in value:
                         yaml_content += f"  - {item}\n"
             else:
-                yaml_content += f"{key}: {value}\n"
+                # Escape values that contain colons or special characters
+                if isinstance(value, str) and (':' in value or '"' in value):
+                    escaped_value = value.replace('"', '\\"')
+                    yaml_content += f'{key}: "{escaped_value}"\n'
+                else:
+                    yaml_content += f"{key}: {value}\n"
         yaml_content += "---\n\n"
         
         # Create the markdown file

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: iCloud and Lion: the mobile world merges with the desktop world
+title: "iCloud and Lion: the mobile world merges with the desktop world"
 parent: iPhone Revolution
 nav_order: 70
 has_children: False

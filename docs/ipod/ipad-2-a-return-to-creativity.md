@@ -1,6 +1,6 @@
 ---
 layout: default
-title: iPad 2: a return to creativity
+title: "iPad 2: a return to creativity"
 parent: iPod Era
 nav_order: 81
 has_children: False

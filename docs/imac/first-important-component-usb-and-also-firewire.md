@@ -1,6 +1,6 @@
 ---
 layout: default
-title: First important component: USB (and also FireWire)
+title: "First important component: USB (and also FireWire)"
 parent: iMac Renaissance
 nav_order: 2
 has_children: False

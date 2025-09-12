@@ -1,6 +1,6 @@
 ---
 layout: default
-title: A thousand songs in your pocket: iPod
+title: "A thousand songs in your pocket: iPod"
 parent: iPod Era
 nav_order: 6
 has_children: False

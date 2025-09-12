@@ -1,6 +1,6 @@
 ---
 layout: default
-title: iPhone 4S: swan song for its creator
+title: "iPhone 4S: swan song for its creator"
 parent: iPod Era
 nav_order: 75
 has_children: False

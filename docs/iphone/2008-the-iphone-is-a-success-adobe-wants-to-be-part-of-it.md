@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2008: The iPhone is a success. Adobe wants to be part of it.
+title: "2008: The iPhone is a success. Adobe wants to be part of it."
 parent: iPhone Revolution
 nav_order: 60
 has_children: False
