@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "First important component: USB (and also FireWire)"
-nav_order: 3
+parent: iPod
+nav_order: 1
 has_children: false
 has_toc: false
 year: 1997

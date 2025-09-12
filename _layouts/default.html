@@ -64,7 +64,10 @@ layout: table_wrappers
                 {{ content }}
               {% endif %}
           
-              {% if page.has_children == true and page.has_toc != false %}
+              {% comment %} Show navigation for pages that have children OR are children themselves {% endcomment %}
+              {% assign children_list = site.pages | where: "parent", page.title | where: "grand_parent", page.parent %}
+              {% assign siblings_list = site.pages | where: "parent", page.parent | where: "grand_parent", page.grand_parent %}
+              {% if children_list != empty or siblings_list.size > 1 %}
                 {% include components/children_nav.html %}
               {% endif %}
             </div>
@@ -84,5 +87,8 @@ layout: table_wrappers
   {% if site.mermaid %}
     {% include components/mermaid.html %}
   {% endif %}
+  
+  <!-- Custom navigation JavaScript -->
+  <script src="{{ '/assets/js/custom-nav.js' | relative_url }}"></script>
 </body>
 </html>

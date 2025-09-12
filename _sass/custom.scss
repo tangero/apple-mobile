@@ -25,3 +25,362 @@
     margin-top: 1rem;
   }
 }
+
+// Timeline styles
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e1e4e8;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: #0366d6;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #e1e4e8;
+}
+
+.timeline-content {
+  background: #f6f8fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #0366d6;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #24292e;
+  font-size: 1.25rem;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #586069;
+}
+
+.timeline-products,
+.timeline-people {
+  font-weight: 500;
+}
+
+.timeline-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.timeline-link:hover {
+  text-decoration: underline;
+}
+
+// Section grid
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.section-card {
+  background: #f6f8fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e1e4e8;
+}
+
+.section-card h3 {
+  margin-top: 0;
+  color: #24292e;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #0366d6;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background: #0256cc;
+  text-decoration: none;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-marker {
+    left: -1rem;
+  }
+  
+  .timeline-meta {
+    font-size: 0.8rem;
+  }
+}
+
+// Navigation menu improvements
+.navigation-list-child-list {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.navigation-list-item.collapsed .navigation-list-child-list {
+  max-height: 0;
+  opacity: 0;
+}
+
+.navigation-list-item:not(.collapsed) .navigation-list-child-list {
+  max-height: 500px;
+  opacity: 1;
+}
+
+// Parent navigation item styling
+.navigation-list-item.has-children > .navigation-list-link {
+  position: relative;
+}
+
+.navigation-list-item.has-children > .navigation-list-link::after {
+  content: '▶';
+  position: absolute;
+  right: 0.5rem;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.navigation-list-item.has-children:not(.collapsed) > .navigation-list-link::after {
+  transform: rotate(90deg);
+}
+
+.navigation-list-item.has-children.collapsed > .navigation-list-link::after {
+  transform: rotate(0deg);
+}
+
+// Better mobile navigation
+@media (max-width: 50rem) {
+  .site-nav {
+    display: none;
+  }
+  
+  .site-nav.nav-open {
+    display: block;
+  }
+}
+
+// Table of Contents styling
+.page-toc {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.page-toc h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #24292e;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 0.5rem;
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-nested {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #e1e4e8;
+}
+
+.toc-link {
+  display: block;
+  padding: 0.25rem 0;
+  color: #0366d6;
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.toc-link:hover {
+  color: #0256cc;
+  text-decoration: underline;
+}
+
+.toc-link.toc-level-2 {
+  font-weight: 600;
+}
+
+.toc-link.toc-level-3 {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.toc-link.toc-level-4,
+.toc-link.toc-level-5,
+.toc-link.toc-level-6 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #586069;
+}
+
+// Responsive TOC
+@media (max-width: 768px) {
+  .page-toc {
+    padding: 1rem;
+  }
+  
+  .toc-nested {
+    padding-left: 0.75rem;
+  }
+  
+  .toc-link {
+    font-size: 0.8rem;
+  }
+}
+
+// Custom children navigation styling
+.child-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.child-nav-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f6f8fa;
+  border-radius: 6px;
+  border: 1px solid #e1e4e8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.child-nav-item:hover {
+  border-color: #0366d6;
+  box-shadow: 0 1px 3px rgba(3, 102, 214, 0.1);
+}
+
+// Current page highlighting
+.child-nav-item.current-page {
+  background: #e6f3ff;
+  border-color: #0366d6;
+  box-shadow: 0 2px 4px rgba(3, 102, 214, 0.15);
+}
+
+.child-nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.child-nav-link:hover {
+  text-decoration: none;
+}
+
+.child-nav-link.current {
+  cursor: default;
+  color: #0366d6;
+  font-weight: 600;
+}
+
+.child-nav-title {
+  color: #24292e;
+  font-size: 1rem;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.child-nav-link.current .child-nav-title {
+  color: #0366d6;
+}
+
+// Year prefix styling (before title)
+.child-nav-year-prefix {
+  color: #0366d6;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.child-nav-link.current .child-nav-year-prefix {
+  color: #024fa3;
+}
+
+// Current page indicator
+.current-indicator {
+  background: #28a745;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.child-nav-summary {
+  margin: 0.5rem 0 0 0;
+  color: #586069;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+// Responsive children nav
+@media (max-width: 768px) {
+  .child-nav-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .current-indicator {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+}

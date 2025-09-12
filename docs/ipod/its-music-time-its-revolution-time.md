@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "It's music time, it's revolution time"
-nav_order: 4
+parent: iPod
+nav_order: 2
 has_children: false
 has_toc: false
 year: 1999-2001
